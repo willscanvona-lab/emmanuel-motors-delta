@@ -2,56 +2,73 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import landCruiserBlack from "@/assets/car-land-cruiser-black.png";
+import hondaAccord from "@/assets/car-honda-accord.png";
+import landCruiserWhite from "@/assets/car-land-cruiser-white.png";
+import camrySilver from "@/assets/car-camry-silver.png";
+import camryGrey from "@/assets/car-camry-grey.png";
+import rushWhite from "@/assets/car-rush-white.png";
+import camryWhite from "@/assets/car-camry-white.png";
+import camryBlack from "@/assets/car-camry-black.png";
+import landCruiserSilver from "@/assets/car-land-cruiser-silver.png";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Sample gallery images - in a real app, these would come from a database or CMS
   const galleryItems = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
-      caption: "Toyota Camry - Available for Sale",
+      url: landCruiserBlack,
+      caption: "Toyota Land Cruiser",
+      price: "₦85,000,000",
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      caption: "Honda Accord - Premium Condition",
+      url: hondaAccord,
+      caption: "Honda Accord",
+      price: "₦18,500,000",
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      caption: "Mercedes-Benz C-Class - Luxury Model",
+      url: landCruiserWhite,
+      caption: "Toyota Land Cruiser",
+      price: "₦82,000,000",
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
-      caption: "Towing Service in Progress",
+      url: camrySilver,
+      caption: "Toyota Camry",
+      price: "₦22,500,000",
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      caption: "BMW 5 Series - For Sale",
+      url: camryGrey,
+      caption: "Toyota Camry",
+      price: "₦21,000,000",
     },
     {
       id: 6,
-      url: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      caption: "Ford Explorer - SUV Available",
+      url: rushWhite,
+      caption: "Toyota Rush",
+      price: "₦28,000,000",
     },
     {
       id: 7,
-      url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
-      caption: "Professional Roadside Assistance",
+      url: camryWhite,
+      caption: "Toyota Camry",
+      price: "₦20,500,000",
     },
     {
       id: 8,
-      url: "https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80",
-      caption: "Lexus ES - Premium Sedan",
+      url: camryBlack,
+      caption: "Toyota Camry",
+      price: "₦24,500,000",
     },
     {
       id: 9,
-      url: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      caption: "Customer Delivery - Satisfied Client",
+      url: landCruiserSilver,
+      caption: "Toyota Land Cruiser",
+      price: "₦78,000,000",
     },
   ];
 
@@ -87,10 +104,11 @@ const Gallery = () => {
                     alt={item.caption}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <p className="text-primary-foreground font-semibold p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      {item.caption}
-                    </p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="text-primary-foreground p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <p className="font-bold text-lg">{item.caption}</p>
+                      <p className="text-logo-gold font-semibold text-xl">{item.price}</p>
+                    </div>
                   </div>
                 </div>
               ))}

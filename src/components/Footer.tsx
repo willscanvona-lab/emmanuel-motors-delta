@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -16,10 +17,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Branding */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">EMMANUEL MOTOR</h3>
-            <p className="text-primary-foreground/80 mb-4">
-              Reliable Cars. Trusted Towing.
-            </p>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="Emmanuel Motor Logo" className="h-16 w-16 rounded-full object-contain bg-white/10 p-2" />
+              <div>
+                <h3 className="text-2xl font-bold">EMMANUEL MOTOR</h3>
+                <p className="text-primary-foreground/80 text-sm">Reliable Cars. Trusted Towing.</p>
+              </div>
+            </div>
             <div className="flex items-start gap-2 text-sm text-primary-foreground/80">
               <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
               <span>Effurun-Sapele Rd, Enerhe, Warri, Delta State, Nigeria</span>

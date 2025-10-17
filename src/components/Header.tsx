@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,8 +23,9 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">EMMANUEL MOTOR</div>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="Emmanuel Motor Logo" className="h-12 w-12 rounded-full object-contain bg-primary/10 p-1.5" />
+            <span className="text-xl font-bold text-primary">EMMANUEL MOTOR</span>
           </Link>
 
           {/* Desktop Navigation */}

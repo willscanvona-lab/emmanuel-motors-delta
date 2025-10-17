@@ -23,6 +23,9 @@ All colors MUST be HSL.
     --secondary: 25 95% 53%;
     --secondary-foreground: 0 0% 100%;
 
+    --logo-gold: 40 85% 60%;
+    --logo-gold-dark: 40 75% 50%;
+
     --muted: 210 20% 96%;
     --muted-foreground: 215 15% 45%;
 
@@ -65,6 +68,9 @@ All colors MUST be HSL.
 
     --secondary: 25 95% 53%;
     --secondary-foreground: 0 0% 100%;
+
+    --logo-gold: 40 85% 60%;
+    --logo-gold-dark: 40 75% 50%;
 
     --muted: 215 25% 18%;
     --muted-foreground: 215 10% 65%;
